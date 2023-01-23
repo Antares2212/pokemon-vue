@@ -1,10 +1,14 @@
 <template>
-  <nav>
-    
-  </nav>
+  <NavBar/>
   <router-view/>
 </template>
+<script>
+import NavBar from './components/NavBar.vue';
 
+export default {
+    components: { NavBar }
+}
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@700&family=Poppins:wght@300;400;500&display=swap');
 
@@ -31,7 +35,6 @@ body {
 }
 
 #app {
-  width: 95%;
   min-width: 320px;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
@@ -44,6 +47,10 @@ a, .btn {
   color: inherit;
   text-decoration: none;
   transition: all .3s;
+}
+
+a:hover, .btn:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 input[type="text"], input[type="password"], select, textarea {
@@ -63,4 +70,13 @@ input[type="text"], input[type="password"] {
 ul {
   list-style: none;
 }
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  min-width: 360px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 </style>
