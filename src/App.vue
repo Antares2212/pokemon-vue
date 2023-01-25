@@ -11,6 +11,7 @@ export default {
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@700&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@700&family=Poppins:wght@300;400;500&family=Titillium+Web:wght@700&display=swap');
 
 * {
   margin: 0;
@@ -27,8 +28,8 @@ body {
   margin: 0;
   padding: 0;
   background: #f4f4f4;
-  font: 14px 'Manrope', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
+  font-family: Titillium Web,sans-serif;
   line-height: normal;
   overflow-x: hidden;
   letter-spacing: 0.02em;
@@ -72,11 +73,23 @@ ul {
 }
 
 .container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 1280px;
   min-width: 360px;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.opt {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.opt:hover {
+  opacity: 1;
 }
 
 </style>
