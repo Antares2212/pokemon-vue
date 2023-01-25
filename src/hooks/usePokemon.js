@@ -1,9 +1,9 @@
 import pokemon from '@/lib/PokemonApi'
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
 pokemon.configure({apiKey: 'c276b120-749e-4cfe-a1bc-9c3fe369a1f9'})
 
-export const usePokemon = (option = {}) => {
+export const usePokemon = () => {
     const pokemone = ref({})
     const pokemonsAll = ref([])
     const searchedPokemons = ref([])
@@ -35,10 +35,6 @@ export const usePokemon = (option = {}) => {
         await pokemon.set.where(option)
         .then(card => searchedPokemons.value = card)
     }
-    
-    onMounted(() => {
-        getAllPokemons(option)
-    })
 
     return {
         pokemonsAll,
