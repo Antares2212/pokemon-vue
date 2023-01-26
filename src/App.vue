@@ -1,12 +1,14 @@
 <template>
   <NavBar/>
   <router-view/>
+  <FooterBar/>
 </template>
 <script>
+import FooterBar from './components/FooterBar.vue';
 import NavBar from './components/NavBar.vue';
 
 export default {
-    components: { NavBar }
+    components: { NavBar, FooterBar }
 }
 </script>
 <style>
@@ -50,8 +52,12 @@ a, .btn {
   transition: all .3s;
 }
 
-a:hover, .btn:hover {
+.navbar a:hover, .btn:hover {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer a:hover, .btn:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 input[type="text"], input[type="password"], select, textarea {
