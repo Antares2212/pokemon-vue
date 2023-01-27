@@ -73,10 +73,6 @@ export default {
         border-bottom-right-radius: 0.25rem;
     }
 
-    .page-content-title {
-        text-align: left;
-    }
-
     .helpView__nav-title {
         font-weight: 600;
         border-top-left-radius: 0.25rem;

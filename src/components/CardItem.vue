@@ -127,6 +127,10 @@ export default {
     .card__wishlist {
         width: 33.33%;
     }
+    
+    .card__price {
+        text-align: center;
+    }
 
     .card__rarity {
         text-align-last: left;
