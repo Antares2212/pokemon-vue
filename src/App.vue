@@ -41,7 +41,6 @@ body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
@@ -77,6 +76,21 @@ ul {
   list-style: none;
 }
 
+.h2, h2 {
+  font-size: 1.4375rem;
+}
+
+.h2, h1, .h1, h2 {
+  font-weight: 400;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -87,6 +101,17 @@ ul {
   padding-right: 1rem;
 }
 
+.content-section {
+  display: block;
+  margin: 0;
+  max-width: 720px;
+}
+
+.page-content {
+  flex: 1;
+  padding: 1.5rem 0 2.5rem;
+}
+
 .page-content-title {
   color: #24292e;
   display: block;
@@ -95,6 +120,27 @@ ul {
   line-height: 1.25;
   margin: 0 0 1.5rem;
   text-transform: none;
+  text-align: left;
+}
+
+.page-header {
+  background-color: #fff;
+  padding: 1.75rem 0 0;
+}
+
+.page-header-content {
+  display: block;
+}
+
+.page-header-title {
+  color: #24292e;
+  display: block;
+  font-size: 1.6875rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  text-transform: none;
+  text-align: left;
 }
 
 .opt {

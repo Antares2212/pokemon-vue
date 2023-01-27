@@ -11,7 +11,7 @@
                                 </router-link>
                             </li>
                             <li>
-                                <router-link to="">
+                                <router-link to="/about">
                                     About
                                 </router-link>
                             </li>
