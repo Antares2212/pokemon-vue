@@ -6,7 +6,7 @@
                     <div class="footer__menu">
                         <ul>
                             <li>
-                                <router-link to="">
+                                <router-link to="/help">
                                     Help
                                 </router-link>
                             </li>
