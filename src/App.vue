@@ -12,8 +12,7 @@ export default {
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@700&family=Poppins:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@700&family=Poppins:wght@300;400;500&family=Titillium+Web:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
 
 * {
   margin: 0;
@@ -79,7 +78,6 @@ ul {
 }
 
 .container {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -87,6 +85,16 @@ ul {
   min-width: 360px;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.page-content-title {
+  color: #24292e;
+  display: block;
+  font-size: 1.6875rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 1.5rem;
+  text-transform: none;
 }
 
 .opt {
