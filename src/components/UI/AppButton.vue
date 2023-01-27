@@ -10,17 +10,20 @@ export default {
 </script>
 <style>
 .btn {
+    border-width: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    min-width: 100px;
+    padding: 0.375rem 0.75rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    font-size: 14px;
-    background-color: #ff3f4c;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    border-radius: 7px;
+    border-radius: 5px;
+    background-color: #fa7035;
+    border-color: #fa7035;
+    color: #fff;
+    text-align: center;
+    display: block;
+    width: fit-content;
 }
 
 .btn:hover {

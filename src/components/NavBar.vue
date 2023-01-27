@@ -169,6 +169,8 @@ export default {
         padding: 10px;
         color: #000000;
         box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+        z-index: 99;
+        background-color: #fff;
     }
 
     .dropdown__content hr {
