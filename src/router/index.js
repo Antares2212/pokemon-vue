@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import CardsView from '../views/CardsView.vue'
 import HelpView from '../views/HelpView.vue'
 import AboutView from '../views/AboutView.vue'
+import PokemonView from '../views/PokemonView.vue'
 
 const routes = [
   {
@@ -24,6 +25,12 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutView
+  },
+  {
+    path: '/cards/:name',
+    name: 'pokemon',
+    component: PokemonView,
+    props: true
   },
 ]
 

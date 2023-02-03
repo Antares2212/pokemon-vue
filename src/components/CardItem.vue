@@ -7,13 +7,22 @@
         </div>
         <div class="card__controls">
             <div class="card__rarity" v-html="rarity"></div>
-            <div class="card__price">
+            <div class="card__price" @click="showDialog">
                 {{ price ? '$' + price : '—' }}
             </div>
             <div class="card__wishlist opt">
                 <i class="fa-solid fa-heart"></i>
             </div>
         </div>
+        <app-dialog 
+            v-model:show="dialogVisible" 
+            :title=
+            "`Prices of ${name} 
+            (${this.card.set.name} 
+            ${number + '/' + printedTotal})`"
+        >
+        <CardMarket :prices="this.card.tcgplayer.prices"/>
+        </app-dialog>
         <div class="card__controls">
             <div class="card__collection opt">
                 <i class="fa-solid fa-layer-group"></i>
@@ -37,39 +46,42 @@
 </template>
 <script>
 import {rareMarker} from '@/helpers/rareMarker'
+import CardMarket from './CardMarket.vue'
 export default {
     data() {
         return {
+            dialogVisible: false,
             img: this.card.images.large,
             name: this.card.name,
             price: this.card.cardmarket.prices.averageSellPrice,
             rarity: rareMarker(this.card.rarity),
             printedTotal: this.card.set.printedTotal,
             number: this.card.number,
-            spinner: 0
-        }
+            spinner: 0,
+        };
     },
     methods: {
         decrementSpinner() {
-            this.spinner--
+            this.spinner--;
         },
         incrementSpinner() {
-            this.spinner++
-        }
+            this.spinner++;
+        },
+        showDialog() {
+            this.dialogVisible = true;
+        },
     },
     props: {
         card: {
             type: Object,
-            default: () => {}
+            default: () => { }
         }
-    }
+    },
+    components: { CardMarket }
 }
 </script>
 <style>
     .card__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: space-between;
         max-width: 280px;
     }
@@ -129,7 +141,12 @@ export default {
     }
     
     .card__price {
+        font-size: 1.0rem;
+        font-weight: 400;
+        color: #106bc5;
+        text-decoration: none;
         text-align: center;
+        cursor: pointer;
     }
 
     .card__rarity {

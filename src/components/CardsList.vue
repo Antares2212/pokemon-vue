@@ -1,7 +1,9 @@
 <template>
     <div class="card__list">
         <template v-if="data != {}">
-            <CardItem v-for="card in data" :card="card" :key="card.id"/>
+            <router-link v-for="card in data" :to="'/cards/' + card.id" :key="card.id">
+                <CardItem :card="card" />
+            </router-link>
         </template>
     </div>
 </template>
