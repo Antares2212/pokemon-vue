@@ -108,6 +108,11 @@ export default {
         background-color: #112b45;
     }
 
+    .navbar a {
+        color: inherit;
+        text-decoration: none;
+    }
+
     .navbar__content {
         display: flex;
         align-items: center;
