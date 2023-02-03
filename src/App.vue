@@ -31,7 +31,7 @@ body {
   background: #f4f4f4;
   font-weight: 300;
   font-family: Titillium Web,sans-serif;
-  line-height: normal;
+  line-height: 1.5;
   overflow-x: hidden;
   letter-spacing: 0.02em;
 }
@@ -44,10 +44,16 @@ body {
   color: #2c3e50;
 }
 
-a, .btn {
+.btn {
   color: inherit;
   text-decoration: none;
   transition: all .3s;
+}
+
+a {
+  transition: all .3s;
+  text-decoration: none;
+  color: #106bc5;
 }
 
 .navbar a:hover, .btn:hover {
