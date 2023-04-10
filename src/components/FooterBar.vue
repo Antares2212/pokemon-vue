@@ -79,6 +79,11 @@ export default {
         background-color: #333;
     }
 
+    .footer a {
+        color: inherit;
+        text-decoration: none;
+    }
+
     .footer__content {
         display: flex;
         flex-direction: column;
